@@ -11,5 +11,5 @@ abstract class Pembayaran {
         echo "Total yang harus dibayar: Rp " . number_format($this->totalBayar, 0, ',', '.') . "<br>";
     }
 
-    abstract public function ProsesTransaksi(); //Lanjut TransferBank.php
+    abstract public function ProsesTransaksi(); //Lanjut AbstractTransferBank.php
 }
