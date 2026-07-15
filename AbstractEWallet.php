@@ -4,8 +4,8 @@ class EWallet extends Pembayaran {
     private $nomorHp;
     
     public function __construct($total, $nHp) {
-        parent::__constrcuct($total);
-        $this->nomorHp = $noHp;
+        parent::__construct($total);
+        $this->nomorHp = $nHp;
     }
 
     public function prosesTransaksi() {
