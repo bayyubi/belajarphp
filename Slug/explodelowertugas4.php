@@ -1,13 +1,24 @@
 <?php
-
-
 $title = "Belajar Coding PHP Sangat Menyenangkan";
-echo "Judul Asli: " . $title . "\n";
+
+echo "Doksli: " . $title;
+echo "<br><br>";
+
 $arrayKata = explode(" ", $title);
 
-echo "<br></br>";
+echo "<b>Hasil explode():</b><br>";
+print_r($arrayKata);
+
+echo "<br><br>";
 
 $arrayKecil = array_map('strtolower', $arrayKata);
-$slug = implode("-", $arrayKecil);
-echo "URL Slug: " . $slug;
 
+echo "<b>Setelah strtolower():</b><br>";
+print_r($arrayKecil);
+
+echo "<br><br>";
+
+$slug = implode("-", $arrayKecil);
+
+echo "<b>Hasil implode():</b><br>";
+echo $slug;
