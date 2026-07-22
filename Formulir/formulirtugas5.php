@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tugas PHP Simple</title>
+    <title>Formulir PHP</title>
 </head>
 <body>
 
