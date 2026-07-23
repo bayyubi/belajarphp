@@ -1,11 +1,11 @@
 <?php
 echo "<br>";
 echo "<h3>Isi Data:</h3>" . "<br>";
-if (isset($_GET['password'])) {
-echo $_GET ['password'];
+if (isset($_POST['password'])) {
+echo $_POST ['password'];
 }
 ?>
-<form action="indexget.php" method="get">
+<form action="indexpost.php" method="post">
     <input type="text" name="nama">
     <input type="password" name="password">
     <input type="submit" name="submit">
