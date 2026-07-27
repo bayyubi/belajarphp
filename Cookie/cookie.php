@@ -11,7 +11,7 @@ if (isset($_POST['submit']) ){
         setcookie('nama', $_POST['nama'], time()+120);
 
 
-        header('Location: profile.php?nama=' . $user);
+        header('Location: profilecookie.php?nama=' . $user);
 
 
     }else{
