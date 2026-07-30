@@ -18,7 +18,7 @@ if (isset($_POST['submit'])){
 }
 ?>
 <form action ="index.php" method="post">
-    <input type ="text" name="nama">
+    <input type ="text" name="nama"> 
     <input type ="password" name="password">
     <input type ="submit" name="submit">
 </form>
