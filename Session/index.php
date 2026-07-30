@@ -1,28 +1,24 @@
 <?php
 
+session_start()
+
 $user = 'bayu';
 $password = '123';
 
-if (isset($_POST['submit']) ){
+if (isset($_POST['submit'])){
+    if($_POST ['nama'] == $user && $_POST ['password'] == $password){
 
-    if( $_POST['nama'] == $user &&
-        $_POST['password'] == $password){
+    $_SESSION ['nama_user'] = $_POST ['nama'];
 
-        setcookie('nama', $_POST['nama'], time()+120);
-
-
-        header('Location: membaca.php?nama=' . $user);
-
-
-    }else{
-        
+        header('Location: profile.php?nama= '. $user);
+    }
+    else{
+        echo 'you shall not pass!';
     }
 }
-
-?> 
-
-<form action="index.php" method="post">
-    <input type="text" name="nama">
-    <input type="password" name="password">
-    <input type="submit" name="submit">
+?>
+<form action ="index.php" method="post">
+    <input type ="text" name="nama">
+    <input type ="password" name="password">
+    <input type ="submit" name="submit">
 </form>
