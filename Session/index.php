@@ -1,6 +1,6 @@
 <?php
 
-session_start()
+session_start();
 
 $user = 'bayu';
 $password = '123';
@@ -10,7 +10,7 @@ if (isset($_POST['submit'])){
 
     $_SESSION ['nama_user'] = $_POST ['nama'];
 
-        header('Location: profile.php?nama= '. $user);
+        header('Location: profile.php?nama=' . $user);
     }
     else{
         echo 'you shall not pass!';
