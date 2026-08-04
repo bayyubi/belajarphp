@@ -6,7 +6,6 @@ $jurusan = "RPL";
 function namapanggil() {
     $GLOBALS['nama'];
     $GLOBALS['jurusan'];
-
 }
 
 namapanggil();
