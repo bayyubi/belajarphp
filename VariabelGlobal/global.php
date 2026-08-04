@@ -4,8 +4,9 @@ $nama = "bayu";
 $jurusan = "RPL";
 
 function namapanggil() {
-    $GLOBALS['nama'] = "bayu";
-    $GLOBALS['jurusan'] = "RPL";
+    $GLOBALS['nama'];
+    $GLOBALS['jurusan'];
+
 }
 
 namapanggil();
