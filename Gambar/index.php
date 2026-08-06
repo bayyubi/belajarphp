@@ -1,4 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <center><h1>Upload Gambar</h1>
+            <form action="index.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="gambar">
+                <input type="submit" name="submit" value="upload">
+            </form>
+        </center>
+    <br>
+    <br>
+</body>
+</html>
+
 <?php
+
+echo "<center>";
 
 if (isset($_POST['submit'])){
     print_r($_FILES);
@@ -11,13 +32,14 @@ if (isset($_POST['submit'])){
 
     if ( $error == 0){
         if($size < 1048576){
-
+        
             if($format == 'image/jpeg' || $format == 'image/png'){
             echo "<br>";
             echo "<br>";
             move_uploaded_file($asal, 'upload/' . $nama);
-            echo 'berhasil upload!';
+            echo 'berhasil upload! <input type="button" name="folder" value="Buka Folder" onclick="window.open(\'upload\')">';
             echo "<br>";
+
             }else{
                 echo 'formatnya harus jpeg atau png';
             }
@@ -31,13 +53,5 @@ if (isset($_POST['submit'])){
         
 }
 
+echo "</center>";
 ?>
-
-<br>
-<center><h1>Upload Gambar</h1>
-<form action="foto.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="gambar">
-    <input type="submit" name="submit" value="upload">
-    <input type="button" name="folder" value="Buka Folder" onclick="window.open('upload')">
-</form>
-</center>
